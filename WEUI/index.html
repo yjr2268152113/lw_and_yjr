@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="page">
+            <div class="page-hd">
+                <h1 class="page-title">Button</h1>
+                <p class="page-desc">按钮</p>
+            </div>
+            <div class="page-bd">
+                <a href="#" class="weui-btn weui-btn_primary" id="primary">猜猜是什么</a>
+                <a href="#" class="weui-btn weui-btn_loading">
+                    <i class="weui-loading"></i>
+                    页面主操作 loading</a>
+                    <a href="https://www.taobao.com/" class="weui-btn weui-btn_mybutton">脑袋不能没有的东西</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        var oPrimary=document.getElementById('primary');
+        console.log(oPrimary);
+        oPrimary.onclick=function(){
+            this.innerHTML='脑袋是yjr的小可爱'
+            this.classList.add('active');
+        }
+        
+       
+    </script>
+
+</body>
+</html>

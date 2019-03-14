@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>送花</title>
+</head>
+<body>
+    <script>
+        // {} json 对象字面量
+        const ljd={
+            name:"刘江东",
+            hometown:"赣州",
+            single:false,
+            room:"1315",
+        };
+        //  JS 极具表现力的语言
+
+        const cst={
+            //属性
+            name:"陈松涛",
+            single:true,
+            hometown:"高安",
+            hobbies:["桌球","下棋","游戏"] ,
+            yz:75,
+            send_flower(target){ //target 形参
+                target.receiveFlower(cst);
+
+            }
+             };
+        const xm={
+                name:"小美",
+                receiveFlower(sender){
+                    console.log("收到了花");
+                    //颜值 85以上
+                    if(sender.yz<85){
+                        console.log("你是个好人");
+                    }else{
+                        console.log("万达走一波");
+                    }
+
+                }
+        }
+        const xiaohong={
+            name:"小红",
+            hometown:"高安",
+            sex:"女",
+            receiveFlower(sender){
+                if(sender.name==="陈松涛"){
+                    console.log("涛哥我们在一起吧！");
+                }else{
+                    console("玩去吧");
+                }
+
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>网易云音乐年度总结</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="shortcut icon" href="//s1.music.126.net/style/favicon.ico">
+
+</head>
+
+<body>
+    <audio src="./bgm.mp3" id="bgm"></audio>
+    <div class="music-btn off"></div>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                slide1
+            </div>
+            <div class="swiper-slide">
+                <div class="view special">
+                    <!-- 荡秋千 -->
+                    <div class="art">
+                        <div class="swing">
+                            <div class="leg2">
+                                <div class="jiojio"></div>
+                            </div>
+                            <div class="leg1">
+                                <div class="jiojio"></div>
+                            </div>
+                            <div class="neck"></div>
+                            <div class="head">
+                                <div class="part"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="m-page m-page-14 f-page z-enter">
+                    <div class="bg f-page"></div>
+                    <div class="art j-art14" style="transform:scale(0.5)">
+                        <div class="lines"></div>
+                        <div class="manwrap">
+                            <div class="shoubi"></div>
+                            <div class="man"></div>
+                            <div class="tou"></div>
+                        </div>
+                    <div class="notes"></div>
+                    </div>
+                    <div class="content"></div>
+                </div>
+                     </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
+    <script>
+        const musicBtn = document.querySelector('.music-btn');
+        const bgm = document.getElementById('bgm');
+        let defautMusicPlay = true;
+        musicBtn.addEventListener('click', () => {
+            if (defautMusicPlay) {
+                bgm.play();
+                // musicBtn.classList.remove('off');
+            }
+            else {
+                bgm.pause();
+                // musicBtn.classList.add('off');
+            }
+            defautMusicPlay = !defautMusicPlay;
+            musicBtn.classList.toggle('off');
+        })
+        const swiper = new Swiper('.swiper-container', {
+            direction :'vertical',
+        })
+    </script>
+</body>
+
+</html>

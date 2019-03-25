@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            height: 100%;
+            width: 100%;
+            background-color:green;
+        }
+        .body{
+            width: 117px;
+            height: 200px;
+
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            background-image: url(./maoshenti.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }    
+        .maowei{
+            height:200px;
+            width: 100px;
+            background-image: url(./maowei.png);
+            background-repeat: no-repeat;
+            position: absolute;
+            top:121px;
+            left:115px;
+            animation: maowei 3s  ease infinite;
+            transform-origin:41% 100%;
+        }  
+        @keyframes maowei{
+            0% {
+                transform: rotate(-5deg);
+               }
+            50% {
+                transform: rotate(0);
+                }
+           100% {
+                transform: rotate(-5deg);
+                }
+        }
+        .maoyan1{
+            width: 30px;
+            height: 30px;
+            background-image: url(./maoyan1.png);
+            background-repeat:no-repeat;
+            position: absolute;
+            top:171px;
+            left:78px;
+            animation: maoyan1 1s ease infinite;  
+          
+        }
+        @keyframes maoyan1{
+            0%{
+                opacity: 0;
+            }
+            50%{
+                opacity: 1;
+            }
+            100%{
+                opacity: 0;
+            }
+        }
+        .maoyan2{
+            width: 30px;
+            height: 30px;
+            background-image: url(./maoyan2.png);
+            background-repeat:no-repeat;
+            position: absolute;
+            top:179px;
+            left:89px;    
+            animation: maoyan2 1s ease infinite;  
+         
+        }
+        @keyframes maoyan2{
+            0%{
+                opacity: 0;
+            }
+            50%{
+                opacity: 1;
+            }
+            100%{
+                opacity: 0;
+            }
+        }
+        .maozhua{
+            width: 34px;
+            height: 81px;
+            background-image: url(./maozhua.png);
+            background-repeat:no-repeat;
+            position: absolute;
+            top:497px;
+            left:191px;    
+            animation: maozhua 3s ease infinite;  
+            transform-origin:60% 4%; 
+        }
+        @keyframes maozhua{
+            0%{
+              transform: rotateZ(0);
+            }
+            30%{
+            transform:rotateZ(45deg);
+            }
+            60%{
+            transform: rotateZ(15deg)
+            }
+            80%{
+                transform: rotate(-10deg)
+            }
+            100%{
+                transform: rotateZ(0)
+            }
+        }
+        .maozui{
+            width: 30px;
+            height: 30px;
+            background-image: url(./maozui.png);
+            background-repeat:no-repeat;
+            position: absolute;
+            top:490px;
+            left:208px;    
+    
+        }
+    </style>
+</head>
+<body>
+    <div class="contain">
+        <div class="cat">
+            <div class="maowei"></div>
+           
+            <div class="body">
+                    <div class="maoyan1"></div>
+                    <div class="maoyan2"></div>
+            </div>
+            <div class="maozhua"></div>
+            <div class="maozui"></div>
+            <div class="maotui"></div>
+        </div>
+    </div>
+    
+</body>
+</html>

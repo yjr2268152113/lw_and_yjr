@@ -5,3 +5,4 @@ function findShort(str){
     return Math.min.apply(null,str.split(' ').map(w=>w.length));
 }
 console.log(findShort('ni shi cai xu kun!'));
+

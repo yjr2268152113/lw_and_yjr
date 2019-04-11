@@ -26,7 +26,26 @@
             },timeOut*1000)
 
         }
-        var p1=new Promise(test);
+        // var p1=new Promise(test);
+        // var p2=p1.then(function(result){
+        //     console.log('成功'+result);
+        // })
+        // p2.catch(function(response){
+        //     console.log('失败'+response)
+
+        // })
+        new Promise(test)
+        .then(function(result){
+            console.log('成功'+result)
+        })
+        .then(function(){
+            console.log('555')
+            
+        })
+        .catch(function(response){
+            console.log('失败'+response)
+        })
+     
     
     </script>
     

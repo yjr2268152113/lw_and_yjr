@@ -1,0 +1,25 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.container{
+    width: 950px;
+    margin: 0 auto;
+}
+html{
+    font-size: 12px;
+}
+.item{
+    border:1px solid #edeeef;
+    color:#b3b2c2;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    max-width: 80px;
+}
+.active{
+    color: green;
+    
+}

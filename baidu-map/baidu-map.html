@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript"
+        src="http://api.map.baidu.com/api?v=2.0&ak=q9K1xxj4jnToQ3bT2ZxY8pAtP8zs2908"></script>
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            width: 1000px;
+            height: 800px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map"></div>
+    <script>
+        var map = new BMap.Map("map");
+        var point = new BMap.Point(116.331398, 39.897445);
+        map.centerAndZoom(point, 12);
+
+        function myFun(result) {
+            var cityName = result.name;
+            map.setCenter(cityName);
+            // alert("当前定位城市:"+cityName);
+            var myGeo = new BMap.Geocoder();
+            // 根据坐标得到地址描述    
+            myGeo.getLocation(new BMap.Point(116.331398, 39.897445), function (result) {
+                if (result) {
+                    alert(result.address);
+                }
+            });
+        }
+        var myCity = new BMap.LocalCity();
+        myCity.get(myFun);
+
+
+
+    </script>
+
+
+</body>
+
+</html>

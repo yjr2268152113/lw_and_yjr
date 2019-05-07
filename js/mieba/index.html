@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+  <div id="app" class="main">
+    <Snap />
+  </div>
+  <!-- <div class="main">
+    <div class="gauntlet">
+      <div class="gauntlet-wrapper">
+        <div id="gauntlet-snap"></div>
+      </div>
+    </div> -->
+  </div>
+  <script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
+  <script>
+
+    Vue.component("Snap", {
+      data() {
+        return {
+          heroName: '灭霸',
+          snaping: false,
+          showReverse: false,
+          showSnap: true,
+          reversing: false
+        }
+      },
+      methods: {
+        snapHandle() {
+          this.snaping = true;
+          if (timer) clearTimeout(timer);
+          var timer = setTimeout(() => {
+            this.showReverse = true;
+            this.showSnap = false;
+            this.snaping = false;
+          }, 2800)
+        },
+        reverseHanle() {
+          this.reversing = true;
+          if (timer) clearTimeout(timer);
+          var timer = setTimeout(() => {
+            this.reversing = false;
+            this.showReverse = false;
+            this.showSnap = true;
+          }, 2800)
+        }
+      },
+      template: `
+        <div class="main">
+          <div class="gauntlet">
+            <div class="gauntlet-wrapper">
+              <div id="gauntlet-snap" class="gauntlet-item"
+              v-show="showSnap"
+              :class="snaping?'snaping':''"
+              @click="snapHandle">
+              </div>
+              <div id="gauntlet-reverse" class="gauntlet-item"
+              v-show="showReverse"
+              @click="reverseHanle"
+              :class="reversing?'reversing':''"
+              >
+              </div>
+            </div>
+          </div>
+        </div>
+       
+      `
+    });
+    // 让某个元素支持MVVM
+    new Vue({
+      el: '#app'
+    });
+  </script>
+</body>
+
+</html>

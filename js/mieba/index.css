@@ -50,3 +50,42 @@
     background-position: -3760px 0;
   }
 }
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+.content .item {
+  flex: 1;
+  height: 260px;
+  margin: 10px;
+  border: 1px solid #CECECE;
+  text-align: center;
+  box-sizing: border-box;
+}
+.content .item .avatar img {
+  width: 200px;
+  height: 200px;
+}
+.content .item .info {
+  height: 30px;
+  line-height: 30px;
+}
+.content .time {
+-webkit-animation: heroBack 2s linear;
+animation: heroBack 2s linear;
+}
+
+.dust-container {
+position: absolute;
+pointer-events: none;
+}
+
+.dust-container canvas {
+position: absolute;
+left: 0;
+top: 0;
+transition: transform 1s ease-out, opacity 1s ease-out;
+opacity: 1;
+transform: rotate(0deg) translate(0px, 0px) rotate(0deg);
+}

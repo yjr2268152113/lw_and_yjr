@@ -1,3 +1,4 @@
+<!--pages/category/category.wxml-->
 <view class="main">
   <view class="category-left">
     <view wx:for="{{category}}" wx:key="{{item.id}}" data-id="{{item.id}}" data-index="{{index}}"
@@ -6,7 +7,7 @@
       {{item.name}}
     </view>
   </view>
-  <scroll-view class="categroy-right" scroll-y scroll-into-view="{{toView}}" scroll-with-animation="true">
+  <scroll-view class="categroy-right" scroll-y scroll-into-view="{{toView}}" scroll-with-animation="true" bindscroll="switchContent">
     <block wx:for="{{detail}}" wx:key="{{item.id}}">
       <view class="cate-box" id="{{item.id}}">
         <view class="cate-banner">
@@ -29,3 +30,4 @@
     </block>
   </scroll-view>
 </view>
+

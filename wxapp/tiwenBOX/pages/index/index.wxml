@@ -1,0 +1,11 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="header">
+  <navigator class="head" url="" >提问箱</navigator>
+  </view>
+</view>
+<view class="problem"  wx:for="{{content}}" wx:key="idnex">
+  <view class="content">
+    {{item}}?</view>
+    <text class="details" bindtap="details">详情</text>
+</view>

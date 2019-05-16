@@ -1,0 +1,53 @@
+/**index.wxss**/
+.header{
+  height: 50px;
+  width: 100%;
+  background: #ffffff;
+  box-sizing: border-box;
+  border-bottom: 1px solid #eee;
+}
+.header .head{
+  color:#444;
+  font-size: 1rem;
+  font-family:serif;
+  text-align: center;
+  line-height: 50px;
+  box-sizing: border-box;
+  font-weight: 400;
+}
+.problem{
+  height: 100px;
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  
+ 
+  
+}
+.problem .content{
+
+  text-align: center;
+  height: 60px;
+  width: 300px;
+  line-height: 60px;
+  margin:0 auto;
+  /* background: green; */
+  font-size: 20px;
+  font-weight: 400;
+  box-sizing: border-box;
+  border-bottom:1px solid #eee;
+  border-left:1px solid #eee;
+  border-right:1px solid #eee;
+  border-radius:10px;
+}
+.problem  .details{
+  font-weight: 400;
+  width: 60px;
+  height: 40px;
+  /* background: red; */
+  position: absolute;
+  right: 0%;
+  bottom: 0%
+
+}

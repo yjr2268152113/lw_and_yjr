@@ -28,7 +28,7 @@ Page({
   },
   switchContent(e) {
     let _this = this
-    console.log(e)
+    console.log(this.data.detail)
     const scrollTop = e.detail.scrollTop;
     const scorllArr = this.data.heightArr;
     if (scrollTop >= scorllArr[scorllArr.length - 1] - (_this.data.conHeight / 2)) {

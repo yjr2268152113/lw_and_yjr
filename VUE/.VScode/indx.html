@@ -19,7 +19,7 @@
                 <ul>
                     <li v-for="todo in todos">{{todo.text}}</li>
                 </ul>-->
-        <p class="cool" v-bind:class="[activeClass]" @click="recverseMsg">{{msg}}</p>
+        <p class="cool" v-bind:class="[activeClass]" @click="reverseMsg">{{msg}}</p>
         <p>{{content}}</p>
         <input type="text" v-model="content">
     </div>
@@ -46,7 +46,7 @@
                 msg: '你是弟弟'
             },
             methods:{
-                recverseMsg(){
+                reverseMsg(){
                     this.msg=this.msg.split('').reverse().join('')
 
                 }

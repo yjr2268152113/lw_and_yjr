@@ -1,0 +1,38 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/me/me"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "电影",
+      "selectedColor":"red",
+      "iconPath": "images/movie.png",
+      "selectedIconPath": "images/tomovie.png"
+    },
+    {
+      "pagePath":"pages/logs/logs",
+      "text":"影院",
+      "selectedColor":"red",
+      "iconPath": "images/yingyuan.png",
+      "selectedIconPath": "images/toyingyuan.png"
+    },
+    {
+        "pagePath": "pages/logs/logs",
+        "text": "我的",
+        "selectedColor":"red",
+        "iconPath": "images/me.png",
+        "selectedIconPath": "images/tome.png"
+    }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

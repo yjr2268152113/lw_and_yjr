@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const multiply=(x,y)=>x*y;
+        // const add5=(x)=>x+5;
+        // const res1=multiply(2,5);
+        // const res2=add5(res1);
+       
+        // const arr=[1,2,3,4,5];
+        // const sum=arr.reduce((pre,next)=>{
+        //     console.log(pre,next);
+        //     // 第一次pre 第一项  next 第二项
+        //     // 第二次以及以后  pre  依赖 上一次的返回结果
+        //     return next+pre
+        // })
+       
+        // const compose=function(...fns){
+        //     //运行fns 组合的函数
+        //     // fns是一个数组[add5,multiply]
+        //     return fns.reduce((prev,next)=>{
+        //          return (...args)=>prev(next(...args))
+        //         })
+        // }
+        // //add5(multiply())
+        // const multiplyAndAdd5=compose(add5,add5,multiply);
+        // console.log(multiplyAndAdd5(2,5))
+        // // add5 add5 (...args)=>add5(add5(...args))
+        // // (...args)=>add5(add5(...args)) multiply (...args)=>(multiply(...args))=>add5(add5(multiply(...args)))
+        // // add5(multiply(2,5))
+        // const args=(...args)=>{
+        //     console.log(args)
+        // }
+        // args(1,2,3,4);
+        // const arr1=[1,2,3,4,1]
+        // let newArr=arr.reduce((pre,next)=>{
+        //     if(!pre.includes(next)){
+        //         pre.push(next)
+        //     }
+        //     return pre
+        // },[])
+        // console.log(newArr)
+        // console.log(...[1,2,3,4,5])
+        const a = [1,2,3]
+        console.log(...a)
+        console.log(1,2,3)
+        // console.log(a)
+    </script>
+</body>
+</html>

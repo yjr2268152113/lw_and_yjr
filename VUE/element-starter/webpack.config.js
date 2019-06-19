@@ -50,7 +50,10 @@ module.exports = (options = {}) => ({
   ],
   resolve: {
     alias: {
-      '~': resolve(__dirname, 'src')
+      '~': resolve(__dirname, 'src'),
+      "pages":resolve(__dirname,'src/pages'),
+      "components":resolve(__dirname,'src/components'),
+      "api":resolve(__dirname,'src/api')
     },
     extensions: ['.js', '.vue', '.json', '.css']
   },

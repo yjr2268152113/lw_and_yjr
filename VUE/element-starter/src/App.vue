@@ -1,9 +1,6 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <div>
-      <el-button @click="startHacking">Start</el-button>
-    </div>
+      <router-view/> 
   </div>
 </template>
 
@@ -19,12 +16,9 @@ export default {
       })
     }
   }
+
+  
 }
 </script>
 
-<style>
-#app {
-  font-family: Helvetica, sans-serif;
-  text-align: center;
-}
-</style>
+

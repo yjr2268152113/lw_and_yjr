@@ -11,21 +11,16 @@
     </div>
   </div>
 </template>
+
 <script>
-import {mapGetters} from 'vuex'
 export default {
   name: 'hd',
   data () {
     return {}
   },
-   computed:{
-    ...mapGetters(
-      ['showSidebar']
-    )
-  },
   methods: {
     leftEvent () {
-      this.$store.dispatch('setShowSidebar',true)
+      this.$store.dispatch('setShowSidebar', true)
     }
   }
 }

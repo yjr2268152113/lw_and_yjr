@@ -8,22 +8,34 @@
       <i class="icon">&#xe63c;</i>
       </router-link>
     </vheader>
+    <!-- tap -->
+    <tab></tab>
+    <keep-alive>
+      <router-view></router-view>
+    </keep-alive>
+ <!-- play -->
+ <!-- sideber -->
+ <sidebar></sidebar>
   </div>
 </template>
 
 <script>
 import vheader from "@/components/header";
+import tab from "@/components/tab";
+import sidebar from "@/components/sidebar"
 export default {
   data() {
     return {};
   },
   components: {
-    vheader
+    vheader,
+    tab,
+    sidebar
   }
 };
 </script>
 <style lang="stylus">
-@import './assets/css/function';
+@import './assets/css/function'
 
 @font-face {
   font-family: 'icon';

@@ -1,0 +1,24 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "下雨",
+      "aurhor": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    },
+    {
+      "body": "弟弟",
+      "id": 2,
+      "posId": "1\n"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

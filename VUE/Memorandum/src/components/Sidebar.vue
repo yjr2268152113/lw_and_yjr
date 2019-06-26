@@ -5,7 +5,7 @@
     </div>
 
     <div class="panel-body">
-      <h1 class="text-center">{{ time }} 小时</h1>
+      <h1 class="text-center">0 小时</h1>
     </div>
 
   </div>
@@ -26,14 +26,13 @@
    height 140px
    .panel-heading
       padding 10px 15px
-      border-bottom  1px solid transparent;
-      border-top-left-radius: 3px
-      border-top-right-radius: 3px
+      border-bottom  1px solid #333333
+      border-top-left-radius 3px
+      border-top-right-radius 3px
       background-color #eeeeee
       .text-center
         text-align center
-        h1
-          font-size 36px
+        font-size 36px
     .panel-body
       padding 15px
 

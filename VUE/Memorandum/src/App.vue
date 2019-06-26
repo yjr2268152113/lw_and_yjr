@@ -13,8 +13,10 @@
      </div>
      </div>
      <div class="content">
+       <div class="a">
     <sidebar></sidebar>
-   <div class="a">
+    </div>
+   <div class="b">
      <router-view></router-view>
    </div>
    </div>
@@ -46,5 +48,12 @@ export default {
       .right
         flex auto
         width 200px 
+    .content
+      
+      .a 
+        width 150px
+        display inline-block
+      .b
+        display inline-block
 </style>
 

@@ -19,7 +19,7 @@ export default {
     props:{
         searches:{
             type:Array,
-            default:[2,3]
+            default:[]
         }
 
     },

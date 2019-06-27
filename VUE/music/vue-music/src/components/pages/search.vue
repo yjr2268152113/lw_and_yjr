@@ -32,7 +32,7 @@
                    </span>
                  </h1>
                  <!-- 搜索历史列表 -->
-                 <searchList :searches="searchHistory"></searchList> 
+                 <searchList :searches="searchHistory" @select="addQuery"></searchList> 
                </div>
              </div>
         </scroll>
@@ -54,7 +54,8 @@ import scroll  from '@/components/scroll'
 import searchList  from '@/components/pages/searchList'
 import suggest  from '@/components/suggest'
 import api from '@/api'
-import { mapGetters} from 'vuex'
+import {mapGetters} from 'vuex'
+import {searchMixin} from '@/common/mixin.js'
 const limit=20
 export default {
   components:{
@@ -63,6 +64,7 @@ export default {
       searchList,
       suggest
   },
+  mixins:[searchMixin],
   computed:{
     ...mapGetters([
       'searchHistory'
@@ -83,10 +85,7 @@ export default {
     onQueryChange(query){
      this.query=query
     },
-    saveSearch(data){
-      console.log(data)
-       this.$store.dispatch('saveSearchHistory',data)
-    },
+  
     blurIput(){
 
     },

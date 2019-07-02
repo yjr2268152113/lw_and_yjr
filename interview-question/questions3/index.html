@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <!-- js中的浅拷贝和深拷贝 -->
+    <!-- <script>
+        //解构
+        function example(){
+            return [1,2,3]
+        }
+        let b=example()[1]
+        console.log(1)
+        let [a,b,c]=example()  //解构
+        let[x,y]=[1,2]   // x=1  y=2
+        //对象的解构
+        let {foo,bar}={foo:'a',bar:'b'}
+        let {foo:baz}={foo:'abc'}
+
+    </script> -->
+    <script>
+        //浅拷贝   修改后  非基本数据会被影响的   基本数据不会被影响
+        let obj={
+            name:'脑袋',
+            age:18,
+            like:['sing','rap']
+           }
+          
+            let obj2=Object.assign({},obj)
+            // let obj3=Object.assign(obj2,like)
+            let obj3={...obj}
+            obj.name='ni'
+            obj.like.push('coding')
+            console.log(obj2)
+            console.log(obj3)
+            //深拷贝
+            let obj4=JSON.parse(JSON.stringify(obj))
+            obj.name('w')
+            console.log(obj4)   
+                    
+
+    </script>
+    
+</body>
+</html>

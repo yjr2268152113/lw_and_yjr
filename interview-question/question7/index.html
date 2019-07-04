@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let a = 'hello',
+      b = 123,
+      c = true,
+      d = undefined,
+      e = null,
+      // ------
+      f = {},
+      g = [],
+      h = function () { };
+      console.log(typeof g)
+      console.log(a instanceof Array)
+      //显式原型：prototype 隐式原型 __proto__
+      function student(name){
+          this.name=name
+      }
+      student.prototype.setAge=function(){
+          this.age=18
+      }
+      let nd=new student('nd')
+      nd.setAge()
+      console.log(nd.age)
+      console.log(nd.__proto__)
+      console.log(student.prototype)
+    //   nd.__proto__=student.prototype
+    //   instanceof 原理
+    function instance_of(L,R){
+        let o=R.prototype
+        L=L.__proto__
+        while(true){
+            if(L===null){
+                //已经找到顶了
+                return false
+            }if(o===L){
+                 L=L.__proto__
+                return true
+            }
+           
+        }
+    }
+    console.log(instance_of([],Array))
+
+    //准确判断数据类型
+    Object.prototype.toString.call()
+    // Object.prototype.toString会取得对象的一个内部属性
+    //然后依据这个内部属性，返回一个'[object Array]'
+    //call将作用域放到这个'[object Array]里面去 我们就可以取到任何对象的内部属性
+    console.log(Object.prototype.toString.call(1))
+    </script>
+</body>
+</html>

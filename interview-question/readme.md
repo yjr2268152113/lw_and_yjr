@@ -39,4 +39,8 @@
 # q7 __proto__ 和 prototype 关联
    __proto__ 是每一个实例 都有的属性，可以访问[prototype]的属性
    实例与其构造函数的prototype指向的是同一个对象
-   
+# ['1','2','3'].map(parseInt)
+ parseInt('1',0)
+ parseInt('2',1)
+ parseInt('3',2)
+ console.log()    [1,nan,nan]

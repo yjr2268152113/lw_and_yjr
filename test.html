@@ -5,26 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <style>
-        .test{
-            width: 50px;
-            height: 50px;
-            background: red;
-            position: relative;
-            
-        }
-        .test1{
-            width: 100px;
-            height: 100px;
-            background: green 
-        }
-    
-    </style>
 </head>
 <body>
-    <div class="class">
-    <div class="test"></div>
-    <div class="test1"></div>
-</div>
+    <script>
+           const str='123'
+        var number=parseInt(str)
+        
+        var get= new Promise((resolve,rejrct)=>{
+            setTimeout(() => {
+                resolve(66)
+            }, 3000);
+        })
+        // get.then(console.log)
+        // get.then(callback)
+        function callback(a,b,c){
+            console.log(a,b,c)
+        }
+     
+    
+        </script>
 </body>
 </html>

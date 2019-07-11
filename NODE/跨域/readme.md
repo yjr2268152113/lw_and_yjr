@@ -30,5 +30,19 @@ A -> proxy->google.com
 
 
 # iframe + window.name
-iframe 共享 window.name
+iframe 共享 window.name  没有postMessage 
+ 只能借助中间的页面通知前端页面（需要获取数据的页面）
+ window.parent.callback(window.names)
+ 
+## jsonp
+1. 定义一个回调
+2. 将回调函数的名字  告诉后端  后端会返回  js
+   回调（res)
+3. script标签 加载过后 执行 返回内容
 
+写一个jsonp的函数 ,以Promise的方式调用
+jsonp(url)
+.then(res=>{
+    
+})
+ 缺点:只能发起get请求

@@ -9,8 +9,7 @@ function addTwoNumbers(l1,l2){
 }
 //529
 let a1=new LinkeNode(5)  //head结点
-
-let a2=new LinkeNode(2)
+let a2=new LinkeNode(2)  
 let a3=new LinkeNode(9)   //未结点
 a1.next=a2
 a2.next=a3

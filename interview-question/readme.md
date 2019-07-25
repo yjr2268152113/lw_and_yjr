@@ -33,7 +33,7 @@
   2. 私有化变量
   3. 模拟块级作用域
 # q5：数组去重
-   Set  indecOf   includes   map  reduce
+   Set  indexOf   includes   map  reduce
 # q6 防抖节流函数原理
 
 # q7 __proto__ 和 prototype 关联

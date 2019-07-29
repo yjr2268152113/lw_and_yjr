@@ -38,6 +38,7 @@
   canvas.height = videoConstraints.height;
   const context = canvas.getContext('2d');
   const videoNode = document.querySelector('#video');
+  console.log(videoNode)
   navigator.getUserMedia({audio: true, video: videoConstraints}, function(stream) {
     videoNode.srcObject = stream;
   }, function(error) {

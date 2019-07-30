@@ -69,7 +69,6 @@ export default {
 }
 </script>
 
-
 <style lang='stylus' scoped>
 .login
   position fixed
@@ -121,4 +120,3 @@ export default {
     height 50px
     font-size 22px
 </style>
-

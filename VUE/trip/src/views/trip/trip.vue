@@ -1,6 +1,6 @@
 <template>
   <div class="trip">
-    <div class="trip-box" v-show="$route.name!=='Map'">
+    <div class="trip-box" v-show="$route.name !== 'Map'">
       <img src="../../assets/img/bg.png" class="trip-bg" alt />
       <div class="trip-con">
         <md-tabs v-model="TripWay">
@@ -12,29 +12,34 @@
         <div class="trip-border">
           <p>累计{{TripWay}}</p>
           <strong>{{distance}}</strong>
-          <p>本月累计{{TripWay}}{{distance}}公里</p>
+          <p>本月{{TripWay}}{{distance}}公里</p>
         </div>
         <div class="trip-start" @click="tripStartOnClick">开始{{TripWay}}</div>
       </div>
     </div>
+    <transition name="fademap">
+      <div class="trip-map" v-if="$route.name === 'Map'">
+        <router-view></router-view>
+      </div>
+    </transition>
   </div>
 </template>
 
 <script>
 export default {
-  data() {
+  name: 'trip',
+  data () {
     return {
-      TripWay: '跑步',
-      distance: 0
+      TripWay: '徒步',
+      distance: '0.0'
     }
   },
   methods: {
     tripStartOnClick() {
-      this.$router.push({
-      })
+      this.$router.push({ name: 'Map', params: { tripType: this.TripWay}})
     }
-  },
-};
+  }
+}
 </script>
 
 <style lang="stylus" scoped>
@@ -125,4 +130,3 @@ export default {
   font-size 16px
   min-height 50px
 </style>
-

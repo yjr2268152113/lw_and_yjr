@@ -44,3 +44,50 @@
  parseInt('2',1)
  parseInt('3',2)
  console.log()    [1,nan,nan]
+
+ # q10  get post 请求在缓存方面的区别
+   get 请求类似于查找的过程， 用户获取数据，可以不用每次都与数据库连接
+   所以可以使用缓存
+   post 一般做的是 修改和删除数据的操作  必须与数据库交互
+   所以不能使用缓存
+   因此get 请求更适合请求缓存 
+# q11  url长度限制
+ http协议并没有限制url的长度。是浏览器或者web浏览器做了urL长度限制，
+ 并针于get 请求的限制
+ IE : 2803
+  Firefox:65536
+  Chrome:8182
+  Safari:80000
+  Opera:19000
+#  q12 前端事件流 
+ 在dom标准的事件模型中, 事件流包括下面几个阶段
+  1. 事件捕获阶段
+  2. 处于目标阶段
+  3. 事件冒泡阶段
+ addEventListener 第三个参数  为true时捕获， fasle时冒泡  默认false (ie只支持事件冒泡)  
+ # q13 图片懒加载和预加载的区别
+   预加载：是提前加载图片,当用户需要查看图片是可直接从本地缓存中渲染
+   懒加载：最为服务器的前端优化，减少请求或延迟请求
+
+  懒加载对服务器有一定的缓解压力作用，预加载则会增加服务器的压力
+# q14 js中的各种位置
+   cilentHeight: 表示可视区域的高度, 不包括boreder 和滚动条
+   offsetHeight: 表示可视区域的高度, 包括boreder 和滚动条
+   scrollHeight: 表示所有区域的高度 包含因为滚动被隐藏的部分
+   clientTop: 表示边框border的厚度，包含因为滚动被隐藏的部分
+   scrollTop:滚动后被隐藏的高度
+#q15 js拖拽功能的实现
+
+#q16 类的创建和继承 
+
+# q17  click 在ios手机上有300ms延迟  原因及解决方法
+
+1.<meta>标签
+  <meta name="viewport" content="width=device-width, initial-scale=no">
+2. FastClick,其原理是：检测到touchend 事件后，立刻发出模拟click并把浏览器300ms之后真实发出的事件阻断
+
+# q18 cookie seesionStorage  localStorage的区别
+  cookie :数据始终在同源的http请求中携带(即使不需要)，cookie在浏览器服务器之间来回传递，而seesionStorage localStorage不会自动把数据发个服务器 仅在本地保存。
+  cookie 还要路径的概念(path)的概念，可以限制cookie 只属于某个路径下 存储只有4kb左右
+  seesionStorage: 仅在当前浏览器窗口关闭前有效，不能长久保存
+  localstorage:在所有的同源窗口都是共享的,cookie也是所有同源窗口共享的 大小5m左右

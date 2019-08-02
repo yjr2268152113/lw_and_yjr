@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    html,body{
+        height: 100%;
+        width: 100%;
+    }
+    .page{
+        height: 100%;
+        width: 100%;
+        background-color: aqua;
+        position: relative;
+    }
+    #box{
+        width: 40px;
+        height: 40px;
+        background-color: red;
+        position: absolute;
+    }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div id="box">
+        </div>
+    </div>
+    <script>
+    let hold=false
+    var box=document.getElementById('box')
+    box.onmousedown=function(e){
+        hold=true
+    }
+    window.onmousemove=function(e){
+        if(hold){
+            box.style.left=e.pgeX+'px'
+            box.style.top=e.pageY+'px'
+        }
+    }
+    window.onmouseup=function(){
+        hold=false
+    }
+    </script>
+</body>
+</html>

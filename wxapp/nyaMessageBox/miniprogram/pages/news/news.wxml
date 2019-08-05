@@ -1,0 +1,39 @@
+<!--miniprogram/pages/news/news.wxml-->
+<view class='container'>
+  <view class='main' wx:if='{{hasInformation}}'>
+    <view class='question-card' wx:for='{{askInformation}}' wx:key='{{index}}'>
+      <view class='backgroud'>
+        <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1558266575916&di=5a04d91d546d38cac981fe0a525d94c3&imgtype=0&src=http%3A%2F%2Fbpic.ooopic.com%2F16%2F19%2F24%2F16192402-0927e51b7da15eceff64510aea4fe09c-3.jpg' />
+      </view>
+      <view class='userinfoAndPass'>
+        <view class='userinfo'>
+          <view class='userinfo-image'>
+            <image src='{{item.imgUrl}}' />
+          </view>
+          <view class='userinfo-name'>
+            <text>{{item.nickName}} :</text>
+          </view>
+        </view>
+        <view class='pass' bindtap='deleteQuestion' data-id='{{index}}'>
+          <image src='../../images/delete.png' />
+        </view>
+      </view>
+      <view class='contentAndDetail'>
+        <view class='contentText'>
+          <text>{{item.question}}</text>
+        </view>
+        <view class='date'>
+          <text>{{item.questionDate}}</text>
+        </view>
+        <view class='detail'>
+          <navigator url='/pages/answer/answer?_id={{item._id}}'>
+            <image src='../../images/detail.png' />
+          </navigator>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='none' wx:else>
+    <text>亲，暂时没有发出留言呢^o^</text>
+  </view>
+</view>

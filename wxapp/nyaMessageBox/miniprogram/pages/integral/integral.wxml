@@ -1,0 +1,26 @@
+<!--pages/integral/integral.wxml-->
+<view class="container" style="height:100%;background:url('../../images/jifentu.jpg') center no-repeat">
+  <view class="header">
+      <open-data type="userAvatarUrl" class="thumb"></open-data>
+      <open-data type="userNickName" lang="zh_CN" class="nickname"></open-data> 
+      <text class="about">积分详情</text>
+  </view>
+  <view wx:if="{{data}}">
+    <view class="allscore">
+      <text class="allscore-text">我的总得分: {{score}} 分</text>
+    </view>
+    <view class="score">
+      <view class="question-score">
+        <text class="question-text">回复得分: {{questionscore}} 分</text>
+      </view>
+      <view class="ask-score">
+        <text class="ask-text">留言得分: {{askscore}} 分</text>
+      </view>
+    </view>
+  </view>
+  <view wx:else>
+    <view class="no-data">
+      <text>亲，暂时还没有得分哦，请再接再厉！</text>
+    </view>
+  </view>
+</view>

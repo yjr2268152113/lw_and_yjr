@@ -1,0 +1,220 @@
+page{
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  background-color: 		#ADD8E6;
+}
+.container{
+  padding-top: 10rpx;
+  position: relative;
+}
+.content{
+  width:80%;
+  background-color: 		#F0FFFF;
+  border-radius:38rpx;
+  height:500rpx;
+  text-align: center;
+  margin: 40rpx auto;
+  box-shadow: 0px 7px 20px 4px gray;
+  justify-content:space-between;
+  /* padding: 20rpx; */
+  transition: .5s all;
+  position: relative;
+  padding-bottom:40rpx;
+}
+.content.tohide{
+  display: none;
+}
+.image{
+  padding: 0 auto;
+  border-bottom: 1px solid #ccc;
+}
+.image image{
+  width: 100rpx;
+  height: 100rpx;
+}
+.announcement{
+  display: block;
+  margin-top: -10rpx;
+  font-size: 32rpx;
+}
+
+.text-content{
+  font-size: 30rpx;
+  align-items: center;
+  width: 100%;
+  padding-top: 57rpx; 
+}
+.text-content text{
+  color: black;
+}
+
+.ask-view.dohide{
+  display: none;
+}
+.ask-view{
+  padding-left: 75rpx;
+}
+.ask-view .input{
+  background-color: white;
+  box-sizing: border-box;
+  padding: 10rpx;
+  border: 1px solid #87CEFF;
+  border-radius: 25rpx;
+  width: 600rpx;
+}
+.ask-view button{
+  background-color: #ecf5f4;
+  border: 1px solid #87CEFF;
+  width: 300rpx;
+  margin-top: 20rpx;
+  margin-left: 300rpx;
+  transform: translate(-50%,0);
+}
+.container .appear{
+  padding-left: 375rpx;
+  border-bottom: 1px solid #87CEFF;
+  border-radius: 50%;
+  margin-top: 20rpx;
+}
+.container .appear.dohide{
+  display: none;
+}
+.container .appear image {
+  width: 60rpx;
+  height: 60rpx;
+  transform: translate(-50%,0);
+}
+.container .disappear{
+  padding-left: 375rpx;
+  border-bottom: 1px solid #87CEFF;
+  border-radius: 50%;
+  margin-top: 20rpx;
+}
+.container .disappear.dohide{
+  display: none;
+}
+.container .disappear image {
+  width: 60rpx;
+  height: 60rpx;
+  transform: translate(-50%,0);
+}
+.main{
+  width: 90%;
+  background-color: 	#00BFFF;
+  height: 250rpx;
+  margin: 100rpx auto;
+  transition: .5s all;
+  position: relative;
+  border-radius: 38rpx;
+  opacity: 1;
+}
+.main .backgroud{
+  width: 100%;
+  height: 250rpx;
+  position: relative;
+  float: left;
+}
+.main .question-card .backgroud image{
+  width: 674rpx;
+   height: 250rpx;
+   position: absolute;
+   left: 0;
+   border-radius: 38rpx;
+}
+.main .question-card{
+  position: relative;
+  overflow: hidden;
+  margin-top: 120rpx;
+  margin-bottom: 100rpx;
+  opacity: 1;
+}
+.main .question-card .userinfoAndPass{
+  width: 100%;
+  height: 90rpx;
+  position: absolute;
+  left: 0;
+}
+.main .question-card .userinfoAndPass .userinfo .userinfo-image{
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+  left: 20rpx;
+  top: 25%;
+}
+.main .question-card .userinfoAndPass .userinfo .userinfo-image image{
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+}
+.main .question-card .userinfoAndPass .userinfo .userinfo-name{
+  position: absolute;
+  top:28%;
+  left: 85rpx;
+  font-size: 30rpx;
+  width: 500rpx;
+  
+}
+.main .question-card .userinfoAndPass .pass{
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+  top: 22%;
+  left: 85%;
+
+}
+.main .question-card .userinfoAndPass .pass image{
+  width: 50rpx;
+  height: 50rpx;
+}
+.main .question-card .contentAndDetail{
+  width: 100%;
+  height: 160rpx;
+  position: absolute;
+  left: 0%;
+  top:36%;
+}
+.main .question-card .contentAndDetail .contentText{
+  text-align: center;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp:1;
+  -webkit-box-orient: vertical; 
+
+}
+.main .question-card .contentAndDetail .detail{
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+  top: 53%;
+  left: 85%;
+}
+.main .question-card .contentAndDetail .detail image{
+  width: 50rpx;
+  height: 40rpx;
+}
+.container .none{
+  width: 100%;
+  height: 100rpx;
+  color: black;
+  text-align: center;
+  margin-top: 20rpx;
+  background-color: white;
+  opacity: 0.5;
+}
+.no_openid icon{
+  display: inline-block;
+  margin-left: 50%;
+  margin-top: 50%;
+  transform: translate(-50%,-50%);
+}
+.no_openid .notice {
+  text-align: center; 
+}
+.main .question-card .contentAndDetail .date{
+  /* width: 200rpx; */
+  height: 50rpx;
+  font-size: 30rpx;
+  padding-top: 42rpx;
+  padding-left: 25rpx;
+}

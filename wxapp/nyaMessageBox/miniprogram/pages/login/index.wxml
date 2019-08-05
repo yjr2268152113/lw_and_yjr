@@ -1,0 +1,27 @@
+<!-- <view class="container">
+<swiper indicator-dots='true' circular='true'>
+<block wx:for="{{imageUrl}}" wx:key="{{index}}">
+<swiper-item>
+<image class='slide-image' src='{{item}}' />
+</swiper-item>
+</block>
+</swiper>
+<view class='userinfo'>
+<button class="button" open-type='getUserInfo' bindgetuserinfo='getUserInfo' size='mini' wx:if="{{!hasUserInfo}}">登录</button>
+<block wx:else>
+<image class='userinfo-avatar' src='{{userinfo.avatarUrl}}' />
+<text class='userinfo-nickName'>{{userinfo.nickName}}</text>
+</block>
+</view>
+</view> -->
+<view wx:if="{{canIUse}}">
+<view class='header'>
+<image src='../../images/weixin.png'></image>
+</view>
+<view class='content'>
+<view>申请获取以下权限</view>
+<text>获取你的公开信息（昵称，头像等）</text>
+</view>
+<button class="button" open-type='getUserInfo' bindgetuserinfo='getUserInfo' size='mini'>授权登录</button>
+</view>
+<view wx:else>请升级微信版本</view>

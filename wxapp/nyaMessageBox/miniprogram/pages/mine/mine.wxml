@@ -1,0 +1,65 @@
+<!--pages/mine/mine.wxml-->
+<!--pages/user/user.wxml-->
+<view class="mine" style="height:100%;background:url({{backgroundImage}}) center no-repeat">
+    <view class="header">
+        <open-data type="userAvatarUrl" class="thumb"></open-data>
+        <open-data type="userNickName" lang="zh_CN" class="nickname"></open-data> 
+        <text class="about" bindtap="my">我的名片</text>
+        <modal title="{{loadStatus}}" hidden="{{modalHidden}}" bindconfirm="modalConfirm" bindcancel="modalCandel" comfirmText="新名字">
+          <view>
+            <image class="VR-photo" src="{{meImg}}" mode='aspectFill'></image>
+          </view>
+        </modal>
+    </view>
+    <view class="mine-integral">
+        <view class="integral-photo">
+            <image class="score" src="../../images/jifen.png"></image>
+        </view>
+        <navigator url="/pages/integral/integral">
+            <view class="integral-text">
+                <text>我的积分</text>
+            </view>
+        </navigator>
+        
+    </view>
+    <view class="mine-focus">
+        <view class="focus-photo">
+            <image class="focus" src="../../images/guanzhu.png"></image>
+        </view>
+        <navigator url="/pages/focus/focus">
+            <view class="focus-text">
+                <text>我的关注</text>
+            </view>
+        </navigator>     
+    </view>
+    <view class="mine-fans">
+        <view class="fans-photo">
+            <image class="fans" src="../../images/fensi.png"></image>
+        </view>
+        <navigator url="/pages/fans/fans">
+            <view class="fans-text">
+                <text>我的粉丝</text>
+            </view>
+        </navigator>      
+    </view>
+    <view class="mine-collection">
+        <view class="collection-photo">
+            <image class="collection" src="../../images/shoucang.png"></image>
+        </view>
+        <navigator url="/pages/collection/collection">
+            <view class="collection-text">
+                <text>我的收藏</text>
+            </view>
+        </navigator>      
+    </view>
+    <view class="mine-question">
+        <view class="question-photo">
+            <image class="question" src="../../images/wenti.png"></image>
+        </view>
+        <navigator url="/pages/news/news">
+            <view class="question-text">
+                <text>我的留言</text>
+            </view>
+        </navigator>
+    </view>
+</view>

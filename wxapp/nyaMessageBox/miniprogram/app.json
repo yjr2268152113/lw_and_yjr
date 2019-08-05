@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/login/index",
+    "pages/others/index",
+    "pages/index/index",
+    "pages/mine/mine",
+    "pages/answer/answer",
+    "pages/integral/integral",
+    "pages/news/news"
+  ],
+  "window": {
+    "backgroundColor": "#87CEFF",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#87CEFF",
+    "navigationBarTitleText": "留言箱",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#fff",
+    "borderStyle": "black",
+    "backgroundColor": "#87CEFF",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "回复",
+        "iconPath": "images/write.png",
+        "selectedIconPath": "images/selectWrite.png"
+      },
+      {
+        "pagePath": "pages/others/index",
+        "text": "留言",
+        "iconPath": "images/Msg.png",
+        "selectedIconPath": "images/MsgSelected.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "images/selectMine.png",
+        "selectedIconPath": "images/mine.png"
+      }
+      
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

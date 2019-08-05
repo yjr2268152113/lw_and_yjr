@@ -1,0 +1,326 @@
+/* miniprogram/pages/answer/answer.wxss */
+
+page {
+  background-color: #add8e6;
+  position: relative;
+}
+
+.container {
+  height: 100%;
+}
+
+.container .userinfoAndContentTextAndButton {
+  height: 100%;
+  width: 90%;
+  background-color: #f0ffff;
+  border-radius: 38rpx;
+  margin: 40rpx auto;
+  padding: 25rpx;
+  position: relative;
+}
+
+.container .userinfoAndContentTextAndButton .userinfo {
+  height: 100rpx;
+  position: relative;
+}
+
+.container .userinfoAndContentTextAndButton .userinfo .userinfo-image {
+  height: 80rpx;
+  width: 80rpx;
+  display: inline-block;
+}
+
+.container .userinfoAndContentTextAndButton .userinfo .userinfo-image image {
+  height: 80rpx;
+  width: 80rpx;
+  border-radius: 50%;
+}
+
+.container .userinfoAndContentTextAndButton .userinfo .follow-image {
+  height: 70rpx;
+  width: 70rpx;
+  display: inline-block;
+  position: absolute;
+  right: 10rpx;
+}
+
+.container .userinfoAndContentTextAndButton .userinfo .follow-image.hide {
+  display: none;
+}
+
+.container .userinfoAndContentTextAndButton .userinfo .follow-image image {
+  height: 70rpx;
+  width: 70rpx;
+}
+
+.container .userinfoAndContentTextAndButton .userinfo .userinfo-name {
+  display: inline-block;
+  height: 100rpx;
+  position: absolute;
+  top: 17rpx;
+  left: 93rpx;
+}
+
+.container .userinfoAndContentTextAndButton .userinfo .userinfo-name text {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.container .userinfoAndContentTextAndButton .userinfo .wen {
+  display: inline-block;
+  height: 80rpx;
+  width: 80rpx;
+  position: absolute;
+  left: 47%;
+  top: -28rpx;
+}
+
+.container .userinfoAndContentTextAndButton .userinfo .wen image {
+  height: 50rpx;
+  width: 50rpx;
+}
+
+.container .answer {
+  height: 100%;
+  width: 90%;
+  border-radius: 38rpx;
+  margin: 130rpx auto;
+  padding: 25rpx;
+}
+
+.container .answer .answerText text {
+  text-align: justify;
+  letter-spacing: -0.12em;
+  word-break: break-all;
+}
+
+.container .answer.hide {
+  display: none;
+}
+
+.container .answer .answer-userinfo {
+  height: 100rpx;
+  margin-bottom: 12rpx;
+  position: relative;
+}
+
+.container .answer .answer-userinfo .userinfo-image {
+  height: 80rpx;
+  width: 80rpx;
+  display: inline-block;
+}
+
+.container .answer .answer-userinfo .userinfo-image image {
+  height: 80rpx;
+  width: 80rpx;
+  border-radius: 50%;
+}
+
+.container .answer .answer-userinfo .follow-image {
+  height: 70rpx;
+  width: 70rpx;
+  display: inline-block;
+  position: absolute;
+  right: 10rpx;
+}
+
+.container .answer .answer-userinfo .follow-image.hide {
+  display: none;
+}
+
+.container .answer .answer-userinfo .follow-image image {
+  height: 70rpx;
+  width: 70rpx;
+}
+
+.container .answer .answer-userinfo .userinfo-name {
+  display: inline-block;
+  position: absolute;
+  top: 17rpx;
+  left: 14%;
+}
+
+.container .answer .answer-userinfo .da {
+  display: inline-block;
+  height: 80rpx;
+  width: 80rpx;
+  position: absolute;
+  left: 47%;
+  top: -28rpx;
+}
+
+.container .answer .answer-userinfo .da.hide {
+  display: none;
+}
+
+.container .answer .answer-userinfo .da image {
+  height: 50rpx;
+  width: 50rpx;
+}
+
+.container .answer .answer-userinfo .da1 {
+  display: inline-block;
+  height: 80rpx;
+  width: 80rpx;
+  position: absolute;
+  left: 47%;
+  top: -28rpx;
+}
+
+.container .answer .answer-userinfo .da1.hide {
+  display: none;
+}
+
+.container .answer .answer-userinfo .da1 image {
+  height: 50rpx;
+  width: 50rpx;
+}
+
+.container .userinfoAndContentTextAndButton .contentText {
+  position: relative;
+}
+
+.container .userinfoAndContentTextAndButton .contentText text {
+  word-break: break-all;
+  text-align: justify;
+  letter-spacing: -0.12em;
+}
+
+.container .userinfoAndContentTextAndButton .button {
+  height: 50rpx;
+  /* top: 360rpx; */
+  width: 100%;
+  padding-top: 30rpx;
+}
+
+.container .userinfoAndContentTextAndButton .button .notCollection {
+  width: 50rpx;
+  height: 50rpx;
+  display: inline-block;
+}
+
+.container .userinfoAndContentTextAndButton .button .notCollection.hide {
+  display: none;
+}
+
+.container .userinfoAndContentTextAndButton .button .notCollection image {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.container .userinfoAndContentTextAndButton .button .Collection {
+  width: 50rpx;
+  height: 50rpx;
+  display: inline-block;
+}
+
+.container .userinfoAndContentTextAndButton .button .Collection.hide {
+  display: none;
+}
+
+.container .userinfoAndContentTextAndButton .button .Collection image {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.container .userinfoAndContentTextAndButton .button .reply {
+  width: 50rpx;
+  height: 50rpx;
+  display: inline-block;
+  position: absolute;
+  left: 645rpx;
+}
+
+.container .userinfoAndContentTextAndButton .button .reply image {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.all {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.all.hide {
+  display: none;
+}
+
+.input-bottom {
+  height: 100rpx;
+  width: 100%;
+  /* margin-top: 53%; */
+  background-color: #ebeff5;
+  position: relative;
+  padding-left: 30rpx;
+}
+
+.input-bottom .back {
+  width: 100rpx;
+  height: 100%;
+  position: absolute;
+  top: 24rpx;
+  left: 18rpx;
+}
+
+.input-bottom .back image {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.input-bottom .input {
+  background-color: #fff;
+  width: 73%;
+  border-radius: 50rpx;
+  height: 60%;
+  position: absolute;
+  top: 19%;
+  left: 11%;
+}
+
+.input-bottom .input input {
+  padding-left: 25rpx;
+}
+
+.input-bottom .send {
+  width: 100rpx;
+  height: 100%;
+  position: absolute;
+  left: 87%;
+  top: 24rpx;
+}
+
+.input-bottom .send image {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.container .answer .answerdate {
+  width: 100%;
+  position: relative;
+}
+
+.container .answer .date {
+  display: inline-block;
+  font-size: 30rpx;
+}
+
+.container .answer .time {
+  display: inline-block;
+  font-size: 30rpx;
+  left: auto;
+  right: 0; 
+  top: auto;
+  bottom: 0;
+  position: absolute;
+}
+
+.container .userinfoAndContentTextAndButton .button .time {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%,0);
+  font-size: 30rpx;
+}

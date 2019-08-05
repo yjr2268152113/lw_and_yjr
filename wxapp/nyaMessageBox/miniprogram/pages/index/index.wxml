@@ -1,0 +1,76 @@
+<!-- 公告栏以及编辑 -->
+<view class='container {{todisappear ? "stop" : ""}}'>
+  <view class='content {{todisappear ? "tohide" : "" }}'>
+    <view class='image'>
+      <image src='../../images/announcement.png' />
+      <text class='announcement'>公告栏</text>
+    </view>
+    <view class='assit'>
+    </view>
+    <view class='text-content'>
+      <text>{{addText}}</text>
+      <view class='edit {{editting ? "hide" : ""}}' bindtap='switchToInput'>
+        <view class='edit-image'>
+          <image src='../../images/edit1.png'></image>
+        </view>
+      </view>
+    </view>
+    <view class='toInput {{isShow ? "" : "hide"}}'>
+      <view class='toInput-div'>
+        <input type='text' class='weui-input' placeholder='想告诉大家什么？' value='{{addText}}' bindinput='setInput' focus='{{focus}}' maxlength='35'/>
+        <view class='toInput-btn'>
+          <button class='weui-btn mini-btn' bindtap='addInput' type='warn' size='mini'>确定</button>
+          <button class='weui-btn mini-btn' bindtap='addInputHide' size='mini'>取消</button>
+          <view class='clear'>
+            <image src='../../images/clear.png' bindtap='toClear' />
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 他人提的问以及跳转链接 -->
+  <view class='appear {{todisappear ? "" : "dohide"}}'>
+    <image bindtap='toAppear' src='../../images/appear.png' />
+  </view>
+  <view class='disappear {{todisappear ? "dohide" : ""}}'>
+    <image bindtap='toDisappear' src='../../images/disappear.png' />
+  </view>
+  <view class='main {{todisappear ? "top" : ""}}' wx:if='{{hasInformation}}'>
+    <view class='question-card' wx:for='{{askInformation}}' wx:key='{{index}}'>
+      <view class='backgroud'>
+        <image src='../../images/b1.jpg' />
+      </view>
+      <view class='userinfoAndPass'>
+        <view class='userinfo'>
+          <view class='userinfo-image'>
+            <image src='{{item.imgUrl}}' />
+          </view>
+          <view class='userinfo-name'>
+            <text>{{item.nickName}} :</text>
+          </view>
+        </view>
+        <view class='pass' bindtap='deleteQuestion' data-id='{{index}}'>
+          <image src='../../images/delete.png' />
+        </view>
+      </view>
+      <view class='contentAndDetail'>
+        <view class='contentText'>
+          <text>{{item.question}}</text>
+        </view>
+        <view class='date'>
+          <text>{{item.questionDate}}</text>
+        </view>
+        <view class='detail'>
+          <navigator url='/pages/answer/answer?_id={{item._id}}'>
+            <image src='../../images/detail.png' />
+          </navigator>
+        </view>
+      </view>
+    </view>
+  </view>
+  <block wx:else>
+    <view class='none {{todisappear ? "move" : ""}}'>
+      <text>亲，暂时没有收到留言呢^o^</text>
+    </view>
+  </block>
+</view>

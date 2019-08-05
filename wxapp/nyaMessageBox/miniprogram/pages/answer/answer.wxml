@@ -1,0 +1,76 @@
+<!--miniprogram/pages/answer/answer.wxml-->
+<view class='container'>
+  <view class='userinfoAndContentTextAndButton'>
+    <view class='userinfo'>
+      <view class='userinfo-image'>
+        <image src='{{question.questionImgUrl}}' />
+      </view>
+      <view class='userinfo-name'>
+        <text>{{question.questionNickName}}:</text>
+      </view>
+      <view class='follow-image {{isFollowQ ? "hide" : ""}}' >
+        <image src='../../images/follow.png' bindtap='followQuestion'/>
+      </view>
+      <view class='follow-image {{isFollowQ ? "" : "hide"}}' >
+        <image src='../../images/followselected.png' bindtap='notFollowQuestion'/>
+      </view>
+    </view>
+    <view class='contentText'>
+      <text>{{question.question}}</text>
+    </view>
+    <view class='button'>
+      <view class='notCollection {{isCollection ? "hide" : ""}}'>
+        <image src='../../images/collection.png' bindtap='toCollection' />
+      </view>
+      <view class='Collection {{isCollection ? "" : "hide"}}'>
+        <image src='../../images/collectioned.png' bindtap='notCollection' />
+      </view>
+      <view class='reply' wx:if='{{canReply}}'>
+        <image src='../../images/reply.png' bindtap='toReply' />
+      </view>
+      <view class='time'>
+        <text>{{question.questionDate}}</text>
+      </view>
+    </view>
+  </view>
+  <view class='answer {{isReply ? "" : "hide"}}' style='background-color:{{isSend ? "#00BFFF" : "#F0FFFF"}};margin:{{isChange ? "130rpx auto" : "40rpx auto"}};'>
+    <view class='answer-userinfo'>
+      <view class='userinfo-image'>
+        <image src='{{question.answerImgUrl}}' />
+      </view>
+      <view class='userinfo-name'>
+        <text>{{question.answerNickName}}:</text>
+      </view>
+      <view class='follow-image {{isFollowA ? "hide" : ""}}' >
+        <image src='../../images/follow.png' bindtap='followAnswer'/>
+      </view>
+      <view class='follow-image {{isFollowA ? "" : "hide"}}' >
+        <image src='../../images/followselected.png' bindtap='notFollowAnswer'/>
+      </view>
+    </view>
+    <view class='answerText'>
+      <text>{{addText}}</text>
+    </view>
+    <view class='answerdate'>
+      <view class='date'>
+        <text>{{question.answerDate}}</text>
+      </view>
+      <view class='time'>
+        <text>{{question.answerTime}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='all {{isAnswer ? "" : "hide"}}'>
+  <view class='input-bottom'>
+    <view class='back'>
+      <image src='../../images/back.png' bindtap='hideInput' />
+    </view>
+    <view class='input'>
+      <input focus='{{focus}}' value='{{question.answer}}' bindinput='toInput' type='text' cursor-spacing='16' maxlength='-1'/>
+    </view>
+    <view class='send'>
+      <image src='../../images/send.png' bindtap='toSend' />
+    </view>
+  </view>
+</view>

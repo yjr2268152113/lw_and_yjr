@@ -1,0 +1,17 @@
+<!--pages/focus/focus.wxml-->
+<view class="container" wx:if="{{hasInfomation}}" style='height:100%;background:url("../../images/focustu.png") no-repeat;'>
+  <view class='user' wx:for="{{user}}" wx:key="{{index}}" data-openid='{{item._openid}}' bindtap='switchTo'>
+    <view class='photo'>
+      <image src='{{item.avatarUrl}}'></image>
+    </view>
+    <view class='text'>
+      <text>{{item.nickName}}</text>
+    </view>
+    <view class='tap'></view>
+  </view>
+</view>
+<view class="container" wx:else style='height:100%;background:url({{backgroundimage}});'>
+  <view class='tip'>
+    <text>亲，暂时没有关注呢^o^</text>
+  </view>
+</view>
